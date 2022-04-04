@@ -1,0 +1,27 @@
+public class Strinex {
+
+  public static void main(String[] args) {
+    String name = "ramesh";
+    String anotherString ="ramesh";
+    System.out.println(name == anotherString); // true
+    /*
+    name and anotherString both string literals pointing to the same object which is in string pool
+    */
+    // String name = new String("ramesh"); it won't allow to assing name to another one
+
+    String thirdname = new String("ramesh");
+    System.out.println(name == thirdname);
+    System.out.println(name.equals(thirdname)); // content check
+     addMoneyToAccount(name,5000);
+
+  }
+  public static void addMoneyToAccount(String accountHolder, int addMoney) {
+    // validations
+    // bunch of code add to money to account
+  }
+
+  /*
+  accountHolder poiting to the "ramesh" and name literal also pointing to the "ramesh", if name changed to another name,
+  accountHolder won't changed to anthor due to string immutability, name can be pointing to another name;
+   */
+}
